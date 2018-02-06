@@ -1,0 +1,115 @@
+To: @EtienneWan@
+From: @VinceLee@
+Subject: Re: X121301: Not Applicable Other Question
+Date: Mon, 04 Jan 2016 12:35:30 -0600
+
+Amazing work!
+
+
+
+-Vince
+
+
+
+----- Original Message -----
+
+From: <@EtienneWan@>
+Subject: Re: X121301: Not Applicable Other Question
+To: @VinceLee@
+Date: Tue, 29 Dec 2015 17:41:24 GMT
+
+>Hi, I have been in a rush of work last few days, but I have worked a bit on
+> Behind the Magic.
+>
+>I converted all snm (and znm) files into mp4 and mp3 files that can be =
+>played natively in the browser. I only have some videos from the falcon =
+>walkthrough to rework (because the converted file gets poor quality), but =
+>it is no problem since I converted all other files with a batch file =
+>(mplayer to get frames and audio track, ffmpeg to encode in x264 and aac).
+>I get a 500MB folder of JPGs and converted video files. It's better than =
+>the size of the two bundles, but still huge to be used through the Internet=
+>. I have to think on how I can compress (it would be great if I could get =
+>less than 200 MB of assets to download).
+>
+>I started working on the architecture of the app : it is not an easy tasks =
+>because I have to deal with lots of views and interactions. For the moment,=
+> I have a working assets loader, fullscreen video player and view switcher.=
+> I need to work on modals, on the controls bar and back/forward navigation,=
+> on a unique hash per view system (to easily switch from a view to another)=
+> and on creating the views themselves.
+>
+>For the moment, the main menu view is done and is not the most difficult so=
+> far (limited number of buttons, not so many interactive elements). I'm =
+>going to make the menu views and the reusable views (like introducing =
+>characters/weapons and the "explore" views) first.
+>
+>I didn't work at all on the DATABASE folder to get the textual contents. =
+>Same for trivia (except converting questions from c-3po, r2... Into mp3 =
+>files)
+>
+>For the moment, I can continue working without using BM and SAD files. I =
+>don't think I will use all SAD files (it gets complicated to add all sounds=
+> into menus) but I will need to use inter alia the ambience files for the =
+>falcon walktrough.
+>For BM files, I will also need to read them especially for some trivia =
+>answers and for vehicles 3D models.
+>Or if you have the original uncompressed files, I'm in! :)
+>
+>I work alone on the project, but I'm going to push to github in a few days.=
+>
+>If there is any license I should add to the project before it goes online, =
+>please tell me.
+>Github will host Behind The Magic at https://behindthemagic.github.io, the =
+>repository is located at github.com/behindthemagic (empty for the moment).
+>
+>Thank you for your help,
+>Etienne Wan
+
+
+----- Original Message -----
+
+@VinceLee@ a écrit:
+> Hello.
+>
+> Obviously, it's been a long time, but I'll do my best to answer as well =
+>as I can remember.  The sad file (Streaming AUdio files) use a custom =
+>format I developed for rebel assault that resembles IFF files in how they =
+>are bundled (4-byte header followed by 4-byte chunk size).  For BTM, I =
+>believe I packed the audio using a custom scheme that chopped up the audio =
+>into sections based on loudness, then normalized each range to full volume =
+>and packed each chunk as 8-bit sound samples with a global scaling factor, =
+>giving samples with the space saving benefits of 8-bit samples but the =
+>dynamic range of a much higher bit rate.
+>
+> I don't really remember what I did with bitmaps, but they were probably =
+>also a simple custom format designed chopped up and embedded into a data =
+>stream for rebel assault.  At most, they would have been run-length encoded=
+>.  I can look when I"m home to see if I can look up any more data.
+>
+> Vince
+
+
+----- Original Message -----
+From: @EtienneWan@
+To: @VinceLee@
+Subject: X121301: Not Applicable Other Question
+>Hello.
+> I would like to talk to Vince Lee.
+> You directed the project Star Wars Behind The Magic a long time ago.
+> I tried recently to contact a member of your former team, Paul Rand Pierce, =
+>to ask some technical questions about Behind The Magic. 
+> Here is his answer : https://twitter.com/paulrandpierce/status/674339640258662400
+> Because I don't have any other method to contact you, I'm using this form.
+> I'm getting to the point: I'm actually making a port of Behind The Magic into the browser =
+>as a personal exercise (and side project).
+> I'm having trouble to extract graphic assets stored as BM files (seems to be bitmap, =
+>0x424D, but unable to convert them). 
+> And also, the same happens to SAD files (beginning of the file in hex: SAUD, sound files).
+> Could you give me information on how the files were compressed and how I can convert them =
+>for my project ? If of course there is no problem due to copyright or =
+>property of LucasArts.
+> Thanks in advance for you answer :)
+>
+>Etienne Wan> 
+>-- 
+>Envoyé depuis Firefox OS

@@ -1,0 +1,15 @@
+Partie Adminisatrative:
+  Les informations importantes sont disponibles sur le moodle.
+  Les trois livrables attendus:
+    - 12 février: écriture d'un premier rapport, cahier des charges et répartition des tâches à réaliser.
+    - 16 mars: prototype du projet: les fonctionnalités principales doivent être implémentée, mais il reste quelques choses à faire pour finir le projet.
+    - 22 mai: fin du projet attentes: le produit final, des tests et un rapport final.
+
+Discussions autour de:
+  -Vuejs ou Angular; pas encore de décision finale.
+  -Internationalisation du site: bonne idée, à voir en fonction du temps disponible.
+  -Restrictions de fonctionnalités à implémenter pour le livrable final, compte tenu du temps limité pour finaliser le projet.
+  
+Utilisation d'une organisation sur GitHub pour héberger le projet et le repository administratif (que l'on souhaite séparer du code)
+
+Droits d'auteur? Echange de mail (janvier 2016) avec Vince Lee, directeur du projet chez LucasArts en 1998, pour qui le projet ne posait pas de problème à ce niveau (cf. mails_Vince_Lee).

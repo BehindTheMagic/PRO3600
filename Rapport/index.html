@@ -1,0 +1,134 @@
+<!doctypehtml>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="ressources/a4.css">
+    <link rel="stylesheet" type="text/css" href="ressources/styles.css">
+</head>
+
+<body>
+    <page size="A4" class="couverture">
+        <div>TELECOM SudParis</div>
+
+        <img src="ressources/splash.png">
+
+        <h1>Star Wars : Behind The Magic</h1>
+        <h2>PRO3600 : Projet Informatique</h2>
+
+        <p>John AO</p>
+        <p>Aurélien DUBOC</p>
+        <p>Etienne LAMOURET</p>
+        <p>Valentin PENCIOLELLI</p>
+
+        <p><strong>Enseignant responsable : </strong>François TRAHAY</p>
+
+        <p>Date de soutenance</p>
+
+        <img src="ressources/tsp.png">
+
+    </page>
+
+    <page size="A4" class="sommaire">
+        <h2>Table des matières</h2>
+        <ol>
+            <li>Introduction <span>3</span></li>
+            <li>Cahier des charges <span>4</span></li>
+            <li>Développement <span>5</span>
+                <ol>
+                    <li>Analyse du problème et spécification fonctionnelle <span>5</span></li>
+                    <li>Conception préliminaire <span>5</span></li>
+                </ol>
+            </li>
+        </ol>
+        <footer></footer>
+    </page>
+
+    <page size="A4">
+        <h2>1. Introduction</h3>
+        <p>Ce document est le rapport du projet informatique portant sur l'encyclopédie Star Wars : Behind The Magic. Il est écrit en HTML, imprimé en PDF avec l'outil impression de Chromium et est versionné dans le dépôt
+            <a href="https://github.com/BehindTheMagic/PRO3600">https://github.com/BehindTheMagic/PRO3600</a>.
+        </p>
+
+        <p>Star Wars: Behind The Magic est une encyclopédie Star Wars distribuée en 1998 sous forme de deux CD-ROM. Elle porte sur la trilogie originale et l'<i>Univers Étendu</i>, actuellement <i>Légendes</i>.</p>
+
+        <p>Aujourd'hui, cette encyclopédie ne fonctionne plus convenablement sur les systèmes actuels. Rendre disponible cette encyclopédie sous forme de site web permettrait d'en faciliter l'accès et la consultation, mais aussi de mutualiser les différentes versions existantes pour réaliser un site multilingue.</p>
+
+        <p>L'idée de ce projet en temps limité est de concevoir l'architecture du site et d'y ajouter les parties les plus intéressantes de l'encyclopédie, pour permettre les itérations futures au-delà du temps imparti.</p>
+
+        <p>Le dépôt du projet se trouvre dans l'organisation GitHub <a href="https://github.com/BehindTheMagic">https://github.com/BehindTheMagic</a>, et le site sera hébergé à l'adresse <a href="https://behindthemagic.github.io">https://behindthemagic.github.io</a>.</p>
+
+
+        <footer></footer>
+    </page>
+
+    <page size="A4">
+        <h2>2. Cahier des charges</h3>
+        <p>L’objectif est d'adapter l’encyclopédie Star Wars : Behind The Magic sous forme de site web. Comme l’encyclopédie est conséquente, nous allons nous focaliser sur quatre parties de l’encyclopédie en particulier pour le livrable final :</p>
+        <ul>
+            <li>Technologie : <i>John</i></li>
+            <li>Événements : <i>Valentin</i></li>
+            <li>Scène par Scène : <i>Etienne</i></li>
+            <li>Glossaire : <i>Aurélien</i></li>
+        </ul>
+
+        <div style="position: absolute; top: 200px; left: 300px; border: 2px solid gray; width:55%"><i>Ces parties sont de taille inégale, il est prévu de rerépartir les efforts de travail sur Technologie et Scène par Scène une fois les autres parties terminées.</i></div>
+
+        <p>Ce sont les quatres parties qui possèdent le plus d’interfaces utilisateurs différentes et diversifiées et qui seront réutilisables pour les autres parties (comme Personnages ou Univers Étendu).</p>
+
+        <img src="ressources/MAINMENU.JPG">
+
+        <p>Nous voulons respecter l’aspect et les fonctionnalités originales de l’encyclopédie :</p>
+        <ul>
+            <li>Les interfaces utilisateurs doivent suivre les interfaces originales,</li>
+            <li>La base de données textuelles, les images et les sons sont importés dans ce projet,</li>
+            <li>Les questions Trivia sur l’univers Star Wars sont disponibles.</li>
+        </ul>
+
+        <p>Nous souhaiterions aussi rajouter ces fonctionnalités :</p>
+        <ul>
+            <li>Proposer un site multilingue basé sur les différentes versions de Behind The Magic (disponible en anglais, français et allemand). [à l’étude pour la faisabilité compte tenu des délais]</li>
+            <li>Pour le glossaire : surligner le texte recherché dans les articles où les termes sont trouvés, et afficher des informations supplémentaires présentes dans la base de données mais non affichées dans la version originale.</li>
+        </ul>
+        <footer></footer>
+    </page>
+
+    <page size="A4">
+
+
+        <h2>3. Développement</h2>
+        <h3>3.1 Analyse du problème et Spécification fonctionnelle</h3>
+
+        <p>Les fonctionnalités à implémenter sont les suivantes :</p>
+        <ul>
+            <li>Architecture du site web pour facilement réaliser des vues (interfaces indépendantes), puis pour facilement naviguer entre elles ;</li>
+            <li>Mise en place d'une page d'accueil, différente du menu principal de l'encyclopédie, pour le choix des langues et le lancement du logiciel.</li>
+            <li>Réalisation de la vue statique "menu principal" et de la barre de navigation omniprésnte.</li>
+            <li>Mise en place d'un système de mise en cache côté client des ressources, pour réduire les temps de chargement.</li>
+            <li>Réalisation des parties citées dans le cahier des charges sous formes de plusieurs vues statiques et dynamiques chacune.</li>
+        </ul>
+
+        <p>L'encyclopédie est composée de vues statiques et de vues dynamiques. Pour les vues statiques, celles-ci seront réalisées au plus proche de l'aspect original et contiendront les liens vers les autres vues de l'encyclopédie, en respectant l'ordonnancement original.</p>
+        <p>Pour les vues dynamiques, nous réaliserons une base de données dans un nouveau format par rapport à l'original, qui reprenda les données textuelle et pointera vers les ressources sonores et graphiques liées chaque élément de l'encyclopédie. Le programme parcourra cette base de données afin de générer l'affichage en fonction du contenu fourni.</p>
+
+        <h3>3.2 Conception préliminaire</h3>
+        <p>Comme l'encyclopédie sera adaptée sous forme de site web avec plusieurs vues, et prévue pour être multilingue : </p>
+        <ul>
+            <li>Le site web sera statique sous forme de Single Page Application avec une librairie Javascript permettant de gérer des vues [à l’étude: Angular ou VueJS].</li>
+            <li>Les images, musiques et vidéos seront converties et optimisées pour une utilisation sur le Web, aussi bien en terme de taille pour la bande passante que de codecs pour une utilisation sur tous les navigateurs.</li>
+            <li>Nous utiliserons les interfaces de programmation i18n du navigateur (internationalisation, en anglais L10n: localization) pour ajouter des langues au projet.</li>
+        </ul>
+
+        <p>Nous écrirons des scripts et des petits outils qui automatiseront et faciliteront la conversion des ressources originales afin de les utiliser sur le Web :</p>
+        <ul>
+            <li>Les fichiers sons peuvent être convertis manuellement avec Audacity, il doit être possible d'automatiser le procédé pour convertir tous les sons pour le Web.</li>
+            <li>Les vidéos peuvent être converties en utilisant ffmpeg. Cela nécessite plusieurs étapes qui peuvent être automatisées pour s'assurer d'obtenir du premier coup des vidéos de bonne qualité, compatibles Web (MP4 codec H264 et MP3, échantillonage 4:2:0) et compressées.</li>
+            <li>La conversion des données textuelles se fera avec un petit outil qui permettra d'indiquer la forme de la base de données que l'on souhaite obtenir.</li>
+        </ul>
+
+        <footer></footer>
+    </page>
+</body>
+
+</html>

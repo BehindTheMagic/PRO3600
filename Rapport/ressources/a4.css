@@ -1,0 +1,77 @@
+html, body{
+    box-sizing: border-box;
+    background: rgb(204, 204, 204);
+    counter-reset: page;
+    font-family: "Cambria";
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+page {
+    position:relative;
+    background: white;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    /* Taille de police par défaut */
+    font-size: 12pt;
+
+    overflow: hidden;
+
+    counter-increment: page;
+}
+
+page[size="A4"] {
+    width: 21cm;
+    height: 29.7cm;
+
+    /* Marges d'impression*/
+    padding: 1.54cm;
+
+}
+
+page[size="A4"][layout="landscape"] {
+    width: 29.7cm;
+    height: 21cm;
+}
+
+@media print {
+    body,
+    page {
+        margin: 0;
+        box-shadow: 0;
+    }
+}
+
+
+
+/* Généralités */
+p, li {
+    text-align: justify;
+}
+p {
+    text-indent: 0.5cm;
+}
+
+img{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/* En tête et pieds de pages */
+footer {
+    position: absolute;
+    left:0;
+    bottom: 5%;
+    display: block;
+    text-align: center;
+    width:100%;
+}
+
+footer:after{
+    content: counter(page);
+}

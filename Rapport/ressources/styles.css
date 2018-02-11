@@ -1,0 +1,33 @@
+.couverture p, .couverture h1, .couverture h2 {
+    text-align: center;
+}
+
+.couverture h2 {
+    margin-bottom: 10%
+}
+
+.couverture p {
+    font-size:16pt;
+}
+.couverture div {
+    text-align: right;
+    margin-bottom:10%;
+}
+
+.couverture img {
+    width: initial;
+}
+
+.sommaire > ol > li {
+    font-weight: bold;
+    margin: 2em 0;
+}
+
+.sommaire > ol > li > ol > li {
+    margin: 1em 0;
+    font-weight: normal
+}
+
+.sommaire span {
+    float: right;
+}
